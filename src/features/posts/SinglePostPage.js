@@ -4,14 +4,13 @@ import { Link } from 'react-router-dom'
 
 import { PostAuthor } from 'features/posts/PostAuthor'
 import { ReactionButtons } from 'features/posts/ReactionButtons'
+import { selectPostById } from 'features/posts/postsSlice'
 import { TimeAgo } from 'features/posts/TimeAgo'
 
 export const SinglePostPage = ({ match }) => {
   const { postId } = match.params
 
-  const post = useSelector((state) =>
-    state.posts.find((post) => post.id === postId)
-  )
+  const post = useSelector((state) => selectPostById(state, postId))
 
   if (!post) {
     return (
