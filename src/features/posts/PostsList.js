@@ -40,11 +40,11 @@ export const PostsList = () => {
   if (postStatus === 'loading') {
     content = <div className="loader">Loading...</div>
   } else if (postStatus === 'succeeded') {
+    // Sort posts in reverse chronological order by datetime string
     const orderedPosts = posts
       .slice()
       .sort((a, b) => b.date.localeCompare(a.date))
 
-    // Sort posts in reverse chronological order by datetime string
     content = orderedPosts.map((post) => (
       <PostExcerpt key={post.id} post={post} />
     ))
