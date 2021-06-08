@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { formatDistanceToNow, parseISO } from 'date-fns'
 import classnames from 'classnames'
 
-import { selectAllUsers } from '../users/usersSlice'
+import { selectAllUsers } from 'features/users/usersSlice'
 
 import {
   allNotificationsRead,
