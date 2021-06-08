@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 import { PostAuthor } from 'features/posts/PostAuthor'
 import { ReactionButtons } from 'features/posts/ReactionButtons'
 import {
-  selectAllPosts,
   fetchPosts,
   selectPostIds,
   selectPostById,
